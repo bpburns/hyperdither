@@ -12,8 +12,8 @@ def dither(num, thresh = 127):
     derr = np.zeros(num.shape, dtype=int)
 
     div = 8
-    for y in xrange(num.shape[0]):
-        for x in xrange(num.shape[1]):
+    for y in range(num.shape[0]):
+        for x in range(num.shape[1]):
             newval = derr[y,x] + num[y,x]
             if newval >= thresh:
                 errval = newval - 255
